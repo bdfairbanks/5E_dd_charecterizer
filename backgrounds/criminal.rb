@@ -3,7 +3,7 @@ class Criminal
     @skill_prof = "Deception, Stealth",
     @equipment = "A crowbar, a set of dark common clothes including a hood, and a belt pouch containing 15 gp"
     @tool_prof = "thieves’ tools " + choose_game()
-    @feature = "Criminal ContactYou have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
+    @feature = "Criminal Contact: You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
     @criminal_specialty = nil
     @personality = nil
     @ideal = nil
@@ -91,9 +91,9 @@ class Criminal
     elsif link == 3
       @bond = "I will become the greatest thief that ever lived."
     elsif link == 4
-      @bond = "I’m guilty of a terrible crime.I hope I can redeem myself for it."
+      @bond = "I’m guilty of a terrible crime. I hope I can redeem myself for it."
     elsif link == 5
-      @bond = "Someone I loved died because of amistake I made. That will never happen again."
+      @bond = "Someone I loved died because of a mistake I made. That will never happen again."
     end
   end
   def find_flaw()
@@ -105,7 +105,7 @@ class Criminal
     elsif crack == 2
       @flaw = "If there’s a plan, I’ll forget it. If I don’t forget it, I’ll ignore it."
     elsif crack == 3
-      @flaw = "I have a “ tell” that reveals when I'm lying."
+      @flaw = "I have a “tell” that reveals when I'm lying."
     elsif crack == 4
       @flaw = "I turn tail and run when things look bad."
     elsif crack == 5
@@ -115,7 +115,7 @@ class Criminal
   def variant()
     yn = rand(2)
     if yn == 0
-      @variant = "Spy. Although your capabilities are not much different from those of a burglar or smuggler, you learned and practiced them in a very different context: as an espionage agent. You might have been an officially sanctioned agent of the crown, or perhaps you sold the secrets you uncovered to the highest bidder."
+      @variant = "Spy: Although your capabilities are not much different from those of a burglar or smuggler, you learned and practiced them in a very different context: as an espionage agent. You might have been an officially sanctioned agent of the crown, or perhaps you sold the secrets you uncovered to the highest bidder."
     elsif yn == 1 
       @variant = nil
     end

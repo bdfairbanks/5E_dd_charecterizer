@@ -2,11 +2,11 @@ class Acolyte
   def initialize()
     @skill_prof = "Insight, Religion",
     @equipment = "A holy symbol (a gift to you when you entered the priesthood), a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a belt pouch containing 15 gp"
-    @feature = "Shelter of the Faithful: As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share  your  religion will support you (but only you) at a modest lifestyle. You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
-      @personality = ""
-      @ideal = ""
-      @bond = ""
-      @flaw = ""
+    @feature = "Shelter of the Faithful: As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle. You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
+      @personality = nil
+      @ideal = nil
+      @bond = nil
+      @flaw = nil
   end
   def find_personality()
     pathos = rand(8)
@@ -31,17 +31,17 @@ class Acolyte
   def find_ideal()
     goal = rand(6)
     if goal == 0
-      @ideal = "Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)"
+      @ideal = "Tradition: The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)"
     elsif goal == 1
-      @ideal = "Charity. I always try to help those in need, no matter what the personal cost. (Good)"
+      @ideal = "Charity: I always try to help those in need, no matter what the personal cost. (Good)"
     elsif goal == 2
-      @ideal = "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)"
+      @ideal = "Change: We must help bring about the changes the gods are constantly working in the world. (Chaotic)"
     elsif goal == 3
-      @ideal = "Power. I hope to one day rise to the top of my faith’s religious hierarchy. (Lawful)"
+      @ideal = "Power: I hope to one day rise to the top of my faith’s religious hierarchy. (Lawful)"
     elsif goal == 4
-      @ideal = "Faith. I trust that my deity will guide my actions, I have faith that if I work hard, things will go well. (Lawful)"
+      @ideal = "Faith: I trust that my deity will guide my actions, I have faith that if I work hard, things will go well. (Lawful)"
     elsif goal == 5 
-      @ideal = "Aspiration. I seek to prove myself worthy of my god’s favor by matching my actions against his or her teachings. (Any)"
+      @ideal = "Aspiration: I seek to prove myself worthy of my god’s favor by matching my actions against his or her teachings. (Any)"
     end
   end
   def find_bond()

@@ -5,10 +5,10 @@ class Entertainer
     @equipment = instrument_prof_picker() +" the favor of an admirer (love letter, lock of hair, or trinket), a costume, and a belt pouch containing 15 gp"
     @entertainer_routine = routine_picker()
     @feature = "By Popular Demand: You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
-      @personality = ""
-      @ideal = ""
-      @bond = ""
-      @flaw = ""
+      @personality = nil
+      @ideal = nil
+      @bond = nil
+      @flaw = nil
   end
   def instrument_prof_picker()
     axe = rand(10)
@@ -60,7 +60,7 @@ class Entertainer
   end
           
   def find_personality()
-    pathos = rand(9)
+    pathos = rand(8)
     if pathos == 0
       @personality = "I know a story relevant to almost every situation."
     elsif pathos == 1
@@ -77,24 +77,22 @@ class Entertainer
       @personality= "I get bitter if I’m not the center of attention."
     elsif pathos == 7
       @personality = "I change my mood or my mind as quickly as I change key in a song."
-    elsif pathos == 8
-      @personality = "I change my mood or my mind as quickly as I change key in a song."
     end
   end
   def find_ideal()
     goal = rand(6)
     if goal == 0
-      @ideal = "Beauty. When I perform, I make the world better than itwas. (Good)"
+      @ideal = "Beauty: When I perform, I make the world better than itwas. (Good)"
     elsif goal == 1
-      @ideal = "Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)"
+      @ideal = "Tradition: The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)"
     elsif goal == 2
-      @ideal = "Creativity. The world is in need of new ideas and bold action. (Chaotic)"
+      @ideal = "Creativity: The world is in need of new ideas and bold action. (Chaotic)"
     elsif goal == 3
-      @ideal = "Greed. I’m only in it for the money and fame. (Evil)"
+      @ideal = "Greed: I’m only in it for the money and fame. (Evil)"
     elsif goal == 4
-      @ideal = "People. I like seeing the smiles on people’s faces when I perform. That’s all that matters. (Neutral)"
+      @ideal = "People: I like seeing the smiles on people’s faces when I perform. That’s all that matters. (Neutral)"
     elsif goal == 5 
-      @ideal = "Honesty. Art should reflect the soul; it should come from within and reveal who we really are. (Any)"
+      @ideal = "Honesty: Art should reflect the soul; it should come from within and reveal who we really are. (Any)"
     end
   end
   def find_bond()
@@ -106,7 +104,7 @@ class Entertainer
     elsif link == 2
       @bond = "I want to be famous, whatever it takes."
     elsif link == 3
-      @bond = "I idolize a hero o f the old tales and measure my deeds against that person’s."
+      @bond = "I idolize a hero of the old tales and measure my deeds against that person’s."
     elsif link == 4
       @bond = "I will do anything to prove myself superior to my hated rival."
     elsif link == 5
@@ -120,7 +118,7 @@ class Entertainer
     elsif crack == 1
       @flaw = "I’m a sucker for a pretty face."
     elsif crack == 2
-      @flaw = "A scandal prevents me from ever going home again. That kind oftrouble seems to follow me around."
+      @flaw = "A scandal prevents me from ever going home again. That kind of trouble seems to follow me around."
     elsif crack == 3
       @flaw = "I once satirized a noble who still wants my head. It was a mistake that I will likely repeat."
     elsif crack == 4

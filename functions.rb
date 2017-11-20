@@ -3,6 +3,7 @@
   require './backgrounds/charlatan.rb'
   require './backgrounds/criminal.rb'
   require './backgrounds/entertainer.rb'
+  require './backgrounds/folk_hero.rb'
   
 def option_decider(input)
   return rand(1..input)
@@ -137,7 +138,7 @@ def choose_class()
 end
 
 def choose_background()
-  outcome = option_decider(5)
+  outcome = option_decider()
   if outcome == 1
     return acolyte_set_up()
   elsif outcome == 2
@@ -207,7 +208,19 @@ def entertainer_set_up()
   return background
 end
 
-
- binding.pry
+def folk_hero_set_up()
+  background = Folk_hero.new
+  background.artisan_tool_picker()
+  background.choose_defining_event()
+  background.find_personality
+  background.find_flaw
+  background.find_ideal
+  background.find_bond
+  return background
+end  
+gnar = folk_hero_set_up()
+barb = Folk_hero.new
+barb.artisan_tool_picker
+binding.pry
 
 
