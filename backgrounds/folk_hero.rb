@@ -96,57 +96,49 @@ class Folk_hero
   def find_ideal()
     goal = rand(6)
     if goal == 0
-      @ideal = "Beauty. When I perform, I make the world better than itwas. (Good)"
+      @ideal = "Respect. People deserve to be treated with dignity and respect. (Good)"
     elsif goal == 1
-      @ideal = "Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)"
+      @ideal = "Fairness. No one should get preferential treatment before the law, and no one is above the law. (Lawful)"
     elsif goal == 2
-      @ideal = "Creativity. The world is in need of new ideas and bold action. (Chaotic)"
+      @ideal = "Freedom. Tyrants must not be allowed to oppress the people. (Chaotic)"
     elsif goal == 3
-      @ideal = "Greed. I’m only in it for the money and fame. (Evil)"
+      @ideal = "Might. If I become strong, I can take what I want— what I deserve. (Evil)"
     elsif goal == 4
-      @ideal = "People. I like seeing the smiles on people’s faces when I perform. That’s all that matters. (Neutral)"
+      @ideal = "Sincerity. There’s no good in pretending to be something I’m not. (Neutral)"
     elsif goal == 5 
-      @ideal = "Honesty. Art should reflect the soul; it should come from within and reveal who we really are. (Any)"
+      @ideal = "Destiny. Nothing and no one can steer me away from my higher calling. (Any)"
     end
   end
   def find_bond()
     link = rand(6)
     if link == 0
-      @bond = "My instrument is my most treasured possession, and it reminds me of someone I love."
+      @bond = "I have a family, but I have no idea where they are. One day, I hope to see them again."
     elsif link == 1
-      @bond = "Someone stole my precious instrument, and someday I’ll get it back."
+      @bond = "I worked the land, I love the land, and I will protect the land."
     elsif link == 2
-      @bond = "I want to be famous, whatever it takes."
+      @bond = "A proud noble once gave me a horrible beating, and I will take my revenge on any bully I encounter."
     elsif link == 3
-      @bond = "I idolize a hero o f the old tales and measure my deeds against that person’s."
+      @bond = "My tools are symbols of my past life, and I carry them so that I will never forget my roots."
     elsif link == 4
-      @bond = "I will do anything to prove myself superior to my hated rival."
+      @bond = "I protect those who cannot protect themselves."
     elsif link == 5
-      @bond = "I would do anything for the other members of my old troupe."
+      @bond = "I wish my childhood sweetheart had come with me to pursue my destiny."
     end
   end
   def find_flaw()
     crack = rand(6)
     if crack == 0
-      @flaw = "I’ll do anything to win fame and renown."
+      @flaw = "The tyrant who rules my land will stop at nothing to see me killed."
     elsif crack == 1
-      @flaw = "I’m a sucker for a pretty face."
+      @flaw = "I’m convinced of the significance of my destiny, and blind to my shortcomings and the risk of failure."
     elsif crack == 2
-      @flaw = "A scandal prevents me from ever going home again. That kind oftrouble seems to follow me around."
+      @flaw = "The people who knew me when I was young know my shameful secret, so I can never go home again."
     elsif crack == 3
-      @flaw = "I once satirized a noble who still wants my head. It was a mistake that I will likely repeat."
+      @flaw = "I have a weakness for the vices of the city, especially hard drink."
     elsif crack == 4
-      @flaw = "I have trouble keeping my true feelings hidden. My sharp tongue lands me in trouble."
+      @flaw = "Secretly, I believe that things would be better if I were a tyrant lording over the land."
     elsif crack == 5
-      @flaw = "Despite my best efforts, I am unreliable to my friends."
-    end
-  end
-  def variant()
-    yn = rand(2)
-    if yn == 0
-      @variant = "Gladiator: A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle the crowd can enjoy. This kind of flashy combat is your entertainer routine, though you might also have some skills as a tumbler or actor. Using your By Popular Demand feature, you can find a place to perform in any place that features combat for entertainment—perhaps a gladiatorial arena or secret pit fighting club. You can replace the musical instrument in your equipment package with an inexpensive but unusual weapon, such as a trident or net."
-    elsif yn == 1 
-      @variant = nil
+      @flaw = "I have trouble trusting in my allies."
     end
   end
 end
